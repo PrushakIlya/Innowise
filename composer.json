@@ -1,0 +1,17 @@
+{
+    "name": "prushak/innowise",
+    "autoload": {
+        "psr-4": {
+            "Prushak\\Innowise\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilya",
+            "email": "89218019+PrushakIlya@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.8"
+    }
+}
