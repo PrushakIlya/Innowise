@@ -1,10 +1,10 @@
 <?php
 
-include_once 'src/Task.php';
-$task = new ('Prushak\Innowise\Task');
+include_once 'src/Task4.php';
+$task_4 = new ('Prushak\Innowise\Task4');
 
-$inputNumber = 1;
-if (!is_int($inputNumber)) {
-    throw new InvalidArgumentException('main function only accepts integers. Input was: '.$inputNumber);
+$inputString = 'The quick-brown_fox jumps over the_lazy-dog-Ilya';
+if (!is_string($inputString)) {
+    throw new InvalidArgumentException('main function only accepts strings. Input was: '.$inputString);
 }
-echo $task->main($inputNumber);
+echo $task_4->main($inputString);
