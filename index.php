@@ -1,10 +1,6 @@
 <?php
 
-include_once 'src/Task.php';
-$task = new ('Prushak\Innowise\Task');
+include_once 'src/Task9.php';
+$task = new ('Prushak\Innowise\Task9');
 
-$inputNumber = 1;
-if (!is_int($inputNumber)) {
-    throw new InvalidArgumentException('main function only accepts integers. Input was: '.$inputNumber);
-}
-echo $task->main($inputNumber);
+var_dump($task->main([1,4,2,6,3,1], 10));
