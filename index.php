@@ -1,6 +1,6 @@
 <?php
 
-include_once 'src/Task4.php';
+include_once 'Task4.php';
 $task_4 = new ('Prushak\Innowise\Task4');
 
 $inputString = 'The quick-brown_fox jumps over the_lazy-dog-Ilya';
