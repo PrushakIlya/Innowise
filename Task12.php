@@ -31,18 +31,26 @@ class Task12
     }
     public function divideBy(int $divider)
     {
-        $this->result = $this->result/$divider;
+        $this->result = $this->result / $divider;
         $this->result = '('.$this->input_1.$this->symbol.$this->input_2.')'.'/'.$divider.' = '.$this->result;
+
         return $this;
     }
     public function operator(int $input_1, int $input_2, string $symbol)
     {
         switch ($symbol) {
-            case '+': $this->result = $input_1 + $input_2;break;
-            case '-': $this->result = $input_1 - $input_2;break;
-            case '*': $this->result = $input_1 * $input_2;break;
+            case '+': $this->result = $input_1 + $input_2;
+
+            break;
+            case '-': $this->result = $input_1 - $input_2;
+
+            break;
+            case '*': $this->result = $input_1 * $input_2;
+
+            break;
         }
         $this->symbol = $symbol;
+
         return $this;
     }
 }
