@@ -8,7 +8,7 @@ use DateTime;
 
 class Task6
 {
-    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'):string
+    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): string
     {
         $count = 0;
         $result = '';
@@ -25,6 +25,7 @@ class Task6
             }
         }
         $result = $count.'<br>'.$result;
+
         return $result;
     }
 }
