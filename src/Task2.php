@@ -19,7 +19,7 @@ class Task2
     }
     private function check(string $date)
     {
-        $match = preg_match('~^(((0|1|2)?[0-9]{1})|(30|31)|([1-9]{1})).((10|11|12)|0?[1-9]{1}).((1900|19[0-9]{2})|(200[0-9]{1}|201[0-9]{1}|202[0-3]{1}))$~', $date);
+        $match = preg_match('~^(((0|1|2)?[0-9]{1})|(30|31)|([1-9]{1})).((10|11|12)|(0?[1-9]{1})).((1900|19[0-9]{2})|(200[0-9]{1}|201[0-9]{1}|202[0-3]{1}))$~', $date);
         if ($match===0) {
             throw new InvalidArgumentException('main function only accepts correct format. Input was: '.$date);
         }
