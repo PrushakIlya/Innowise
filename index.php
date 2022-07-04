@@ -1,6 +1,6 @@
 <?php
 
-include_once 'src/Task8.php';
+include_once 'Task8.php';
 $task_8 = new ('Prushak\Innowise\Task8');
 $json = '{
         "Title": "The Cuckoos Calling",
