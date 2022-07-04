@@ -6,14 +6,15 @@ use InvalidArgumentException;
 
 class Task9
 {
-    public function main(array $arr, int $number):array
+    public function main(array $arr, int $number): array
     {
-        $result = array();
-        for ($i=0;$i<count($arr)-2;$i++) {
-            $sum = $arr[$i]+$arr[$i+1]+$arr[$i+2];
-            $sum === $number && array_push($result, $arr[$i].'+'.$arr[$i+1].'+'.$arr[$i+2].'='.$sum);
+        $result = [];
+        for ($i = 0;$i < count($arr) - 2;$i++) {
+            $sum = $arr[$i] + $arr[$i + 1] + $arr[$i + 2];
+            $sum === $number && array_push($result, $arr[$i].'+'.$arr[$i + 1].'+'.$arr[$i + 2].'='.$sum);
         }
         $this->check($result);
+
         return $result;
     }
     private function check(array $result)
