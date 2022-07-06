@@ -11,6 +11,6 @@ class Task3
             $input = array_sum($arr);
         }
 
-        return (int)$input;
+        return $input;
     }
 }
