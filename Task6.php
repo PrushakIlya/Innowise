@@ -9,7 +9,7 @@ use InvalidArgumentException;
 
 class Task6
 {
-    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): string
+    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): int
     {
         $this->check($year, $lastYear, $month, $lastMonth);
         $count = 0;
@@ -31,8 +31,8 @@ class Task6
     }
     private function check(int $year, int $lastYear, int $month, int $lastMonth)
     {
-        if ($year < 0 || $lastYear < 0 || $month < 0 || $lastMonth < 0) {
-            throw new InvalidArgumentException('main function only accepts positive numbers');
+        if ($year < 0 || $lastYear < 0 || ($month <= 0 || $month > 12) || ($lastMonth <= 0 || $lastMonth > 12)) {
+            throw new InvalidArgumentException('main function only accepts positive numbers and correct numbers');
         }
     }
 }
