@@ -4,13 +4,19 @@ namespace Prushak\Innowise;
 
 class Task3
 {
-    public function main(int $input): int
+    private int $input;
+
+    public function __construct($input)
     {
-        while (strlen((string)$input) !== 1) {
-            $arr = str_split($input);
-            $input = array_sum($arr);
+        $this->input = $input;
+    }
+    public function main(): int
+    {
+        while (strlen((string)$this->input) !== 1) {
+            $arr = str_split($this->input);
+            $this->input = array_sum($arr);
         }
 
-        return $input;
+        return $this->input;
     }
 }
