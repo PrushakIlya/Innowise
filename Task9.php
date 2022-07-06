@@ -6,16 +6,22 @@ use InvalidArgumentException;
 
 class Task9
 {
-    public function main(array $arr, int $number): array
+    public function main(array $arr, int $number): string
     {
         $result = [];
+        $str = '';
         for ($i = 0;$i < count($arr) - 2;$i++) {
             $sum = $arr[$i] + $arr[$i + 1] + $arr[$i + 2];
-            $sum === $number && array_push($result, $arr[$i].'+'.$arr[$i + 1].'+'.$arr[$i + 2].'='.$sum);
+            $sum === $number && array_push($result, $arr[$i].' + '.$arr[$i + 1].' + '.$arr[$i + 2].' = '.$sum);
         }
         $this->check($result);
+        $str .= 'Array<br>(<br>';
+        foreach ($result as $key => $item) {
+            $str .= '['.$key.'] => '.$item.'<br>';
+        }
+        $str .= ')';
 
-        return $result;
+        return $str;
     }
     private function check(array $result)
     {
