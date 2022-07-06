@@ -5,11 +5,13 @@ namespace src;
 use DateInterval;
 use DatePeriod;
 use DateTime;
+use InvalidArgumentException;
 
 class Task6
 {
     public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): string
     {
+        $this->check($year, $lastYear, $month, $lastMonth);
         $count = 0;
         $result = '';
         $begin = new DateTime($year.'-'.$month);
@@ -26,5 +28,11 @@ class Task6
         }
 
         return $count;
+    }
+    private function check(int $year, int $lastYear, int $month, int $lastMonth)
+    {
+        if ($year < 0 || $lastYear < 0 || $month < 0 || $lastMonth < 0) {
+            throw new InvalidArgumentException('main function only accepts positive numbers');
+        }
     }
 }
