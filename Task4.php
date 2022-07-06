@@ -1,29 +1,23 @@
 <?php
 
-namespace Prushak\Innowise;
+namespace src;
 
 class Task4
 {
-    private string $input;
-
-    public function __construct(string $input)
-    {
-        $this->input = $input;
-    }
-    public function main(): string
+    public function main(string $input): string
     {
         $symbols = [' ', '_', '-'];
         $flag = 0;
         $new_arr = [];
         while ($flag < 3) {
-            $new_arr = explode($symbols[$flag], $this->input);
-            $this->input = '';
+            $new_arr = explode($symbols[$flag], $input);
+            $input = '';
             foreach ($new_arr as $item) {
-                $this->input .= ucfirst($item);
+                $input .= ucfirst($item);
             }
             $flag++;
         }
 
-        return $this->input;
+        return $input;
     }
 }
