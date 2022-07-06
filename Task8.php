@@ -13,7 +13,7 @@ class Task8
             if (str_contains($mathes[0][$i], '{')) {
                 $i++;
             } else {
-                $result .= $mathes[0][$i].':'.$mathes[0][$i + 1].'<br>';
+                $result .= trim($mathes[0][$i], '"').': '.trim($mathes[0][$i + 1], '"').'<br>';
                 $i += 2;
             }
         }
