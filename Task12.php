@@ -2,6 +2,8 @@
 
 namespace src;
 
+use InvalidArgumentException;
+
 class Task12
 {
     private int $input_1;
@@ -31,6 +33,7 @@ class Task12
     }
     public function divideBy(int $divider): object
     {
+        $this->check($divider);
         $this->result = $this->result / $divider;
         $this->result = '(' . $this->input_1 . $this->symbol . $this->input_2 . ')' . '/' . $divider . ' = ' . $this->result;
 
@@ -55,5 +58,11 @@ class Task12
         $this->symbol = $symbol;
 
         return $this;
+    }
+    private function check(int $divider)
+    {
+        if ($divider === 0) {
+            throw new InvalidArgumentException('The divider can not be equal 0. Input was: '.$divider);
+        }
     }
 }
