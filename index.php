@@ -6,9 +6,9 @@ $json = '{
         "Title": "The Cuckoos Calling",
         "Author": "Robert Galbraith",
         "Detail": {
-            "Publisher":{ 
-                "ilya": "Little Brown"}   
+        "Publisher": "Little Brown"
         }
-        }';
+        }
+        ';
 
 echo $task_8->main($json);
