@@ -4,7 +4,7 @@ namespace Prushak\Innowise;
 
 class Task8
 {
-    public function main(string $json)
+    public function main(string $json): string
     {
         $result = '';
         preg_match_all('~"[a-zA-Z\s]+"(:\s?{)?~', $json, $mathes);
