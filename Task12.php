@@ -15,6 +15,10 @@ class Task12
         $this->input_1 = $input_1;
         $this->input_2 = $input_2;
     }
+    public function __call($name, $arguments)
+    {
+        throw new InvalidArgumentException('This function does not exist. Input was: '.$name);
+    }
     public function main(): string
     {
         return $this->result;
@@ -31,7 +35,7 @@ class Task12
     {
         return $this->operator($this->input_1, $this->input_2, '*');
     }
-    public function divideBy(int $divider): object
+    public function divideBy(int $divider = 1): object
     {
         $this->check($divider);
         $this->result = $this->result / $divider;
