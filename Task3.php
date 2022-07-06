@@ -1,22 +1,16 @@
 <?php
 
-namespace Prushak\Innowise;
+namespace src;
 
 class Task3
 {
-    private int $input;
-
-    public function __construct(int $input)
+    public function main(int $input): int
     {
-        $this->input = $input;
-    }
-    public function main(): int
-    {
-        while (strlen((string)$this->input) !== 1) {
-            $arr = str_split($this->input);
-            $this->input = array_sum($arr);
+        while (strlen((string)$input) !== 1) {
+            $arr = str_split($input);
+            $input = array_sum($arr);
         }
 
-        return $this->input;
+        return $input;
     }
 }
