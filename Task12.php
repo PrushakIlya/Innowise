@@ -13,30 +13,30 @@ class Task12
         $this->input_1 = $input_1;
         $this->input_2 = $input_2;
     }
-    public function show()
+    public function main(): string
     {
         return $this->result;
     }
-    public function add()
+    public function add(): object
     {
         return $this->operator($this->input_1, $this->input_2, '+');
     }
-    public function subtract()
+    public function subtract(): object
     {
         return $this->operator($this->input_1, $this->input_2, '-');
     }
-    public function multiply()
+    public function multiply(): object
     {
         return $this->operator($this->input_1, $this->input_2, '*');
     }
-    public function divideBy(int $divider)
+    public function divideBy(int $divider): object
     {
         $this->result = $this->result / $divider;
         $this->result = '(' . $this->input_1 . $this->symbol . $this->input_2 . ')' . '/' . $divider . ' = ' . $this->result;
 
         return $this;
     }
-    public function operator(int $input_1, int $input_2, string $symbol)
+    public function operator(int $input_1, int $input_2, string $symbol): object
     {
         switch ($symbol) {
             case '+':
