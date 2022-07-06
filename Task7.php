@@ -1,6 +1,6 @@
 <?php
 
-namespace Prushak\Innowise;
+namespace src;
 
 use InvalidArgumentException;
 
