@@ -24,8 +24,7 @@ class Task6
                 $result .= $date->format('d.m.y') . '<br>';
             }
         }
-        $result = $count.'<br>'.$result;
 
-        return $result;
+        return $count;
     }
 }
