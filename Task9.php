@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class Task9
 {
-    public function main(array $arr, int $number): string
+    public function main(array $arr, int $number): array
     {
         $result = [];
         $str = '';
@@ -15,13 +15,13 @@ class Task9
             $sum === $number && array_push($result, $arr[$i].' + '.$arr[$i + 1].' + '.$arr[$i + 2].' = '.$sum);
         }
         $this->check($result);
-        $str .= 'Array<br>(<br>';
-        foreach ($result as $key => $item) {
-            $str .= '['.$key.'] => '.$item.'<br>';
-        }
-        $str .= ')';
+        // $str .= 'Array<br>(<br>';
+        // foreach ($result as $key => $item) {
+        //     $str .= '['.$key.'] => '.$item.'<br>';
+        // }
+        // $str .= ')';
 
-        return $str;
+        return $result;
     }
     private function check(array $result)
     {
