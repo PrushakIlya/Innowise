@@ -2,10 +2,13 @@
 
 namespace src;
 
+use InvalidArgumentException;
+
 class Task10
 {
     public function main(int $input): string
     {
+        $this->check($input);
         $result = [$input];
         $str = '';
         while ($input !== 1) {
@@ -23,5 +26,11 @@ class Task10
         $str .= ')';
 
         return $str;
+    }
+    private function check(int $input)
+    {
+        if ($input <= 0) {
+            throw new InvalidArgumentException('main function only accepts correct data. Input was: '.$input);
+        }
     }
 }
