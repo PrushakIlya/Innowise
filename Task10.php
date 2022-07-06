@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class Task10
 {
-    public function main(int $input): string
+    public function main(int $input): array
     {
         $this->check($input);
         $result = [$input];
@@ -19,13 +19,13 @@ class Task10
             }
             array_push($result, $input);
         }
-        $str = 'Array<br>(<br>';
-        foreach ($result as $key => $item) {
-            $str .= '['.$key.'] => '.$item.'<br>';
-        }
-        $str .= ')';
+        // $str = 'Array<br>(<br>';
+        // foreach ($result as $key => $item) {
+        //     $str .= '['.$key.'] => '.$item.'<br>';
+        // }
+        // $str .= ')';
 
-        return $str;
+        return $result;
     }
     private function check(int $input)
     {
