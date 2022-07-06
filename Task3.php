@@ -6,7 +6,7 @@ class Task3
 {
     private int $input;
 
-    public function __construct($input)
+    public function __construct(int $input)
     {
         $this->input = $input;
     }
