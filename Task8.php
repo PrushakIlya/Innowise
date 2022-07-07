@@ -16,11 +16,11 @@ class Task8
             if (str_contains($matches[0][$i], '{')) {
                 $i++;
             } else {
-                $result .= trim($matches[0][$i], '"').': '.trim($matches[0][$i + 1], '"')."\n";
+                $result .= trim($matches[0][$i], '"').': '.trim($matches[0][$i + 1], '"').PHP_EOL;
                 $i += 2;
             }
         }
 
-        return rtrim($result, "\n");
+        return rtrim($result, PHP_EOL);
     }
 }
