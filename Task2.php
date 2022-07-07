@@ -7,7 +7,7 @@ use InvalidArgumentException;
 
 class Task2
 {
-    public function main(string $date): string
+    public function main(string $date): int
     {
         $this->check($date);
         $date = explode('.', $date);
@@ -16,7 +16,7 @@ class Task2
         $year = 2022;
         $date[0] < $time[0] && $date[1] === $time[1] && $year = 2023;
 
-        return date_diff(new DateTime(), new DateTime($year.'-'.$date[1].'-'.$date[0] + 1))->days;
+        return date_diff(new DateTime(), new DateTime($year.'-'.$date[1].'-'.($date[0] + 1)))->days;
     }
     private function check(string $date)
     {
