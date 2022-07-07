@@ -10,15 +10,21 @@ class Task3
     {
         $this->check($input);
         while (strlen((string)$input) !== 1) {
+            $sum = 0;
             $arr = str_split($input);
-            $input = array_sum($arr);
+            foreach ($arr as $item) {
+                $sum += (int)$item;
+            }
+            $input = $sum;
+            // $arr = str_split($input); //second version
+            // $input = array_sum($arr);
         }
 
         return $input;
     }
     private function check(int $input)
     {
-        if ($input <= 0) {
+        if ($input < 0) {
             throw new InvalidArgumentException('main function only accepts positive number. Input was: '.$input);
         }
     }
