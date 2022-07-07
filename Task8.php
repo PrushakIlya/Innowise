@@ -8,6 +8,7 @@ class Task8
 {
     public function main(string $json): string
     {
+        header('Content-type: application/json');
         $result = '';
         $matche = preg_match_all('~"[a-zA-Z\s]+"(:\s?{)?~', $json, $matches);
         $matche === 0 && throw new InvalidArgumentException('input is not correct');
