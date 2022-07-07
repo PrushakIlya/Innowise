@@ -7,9 +7,70 @@ class Task5
     // public function main(int $num): float
     // {
     //     $s = sqrt(5);
+
     //     $p = ($s + 1) / 2;
 
     //     return (pow($p, $num) / $s + 0.5);
+    // }
+    // public function main($n)
+    // {
+    //     // К-во разрядов
+    //     $digit = intval($n / 4) + 5;
+    //     $result = '';
+    //     $a1 = [];
+    //     $a2 = [];
+    //     $a3 = [];
+    //     $a1[0] = 1;
+    //     $a2[0] = 1;
+    //     for ($j = 2; $j < $n; $j++) {
+    //         for ($i = 0; $i < $digit; $i++) {
+    //             $a1[$i] = isset($a1[$i]) ? $a1[$i] : 0;
+    //             $a2[$i] = isset($a2[$i]) ? $a2[$i] : 0;
+    //             $b = intval(($a1[$i] + $a2[$i]) / 10);
+    //             $a3[$i] = $a1[$i] + $a2[$i] - $b * 10;
+    //             isset($a1[$i + 1]) ? $a1[$i + 1] += $b : $a1[$i + 1] = $b;
+    //         }
+    //         for ($i = 0; $i < $digit; $i++) {
+    //             $a1[$i] = $a2[$i];
+    //             $a2[$i] = $a3[$i];
+    //             $a3[$i] = 0;
+    //         }
+    //     }
+    //     $flg = false;
+    //     for ($i = count($a2) - 1; $i >= 0; $i--) {
+    //         if ($a2[$i] >= 1) {
+    //             $flg = true;
+    //         }
+    //         if ($flg) {
+    //             $result .= $a2[$i];
+    //         }
+    //     }
+
+    //     return $result;
+    // // }
+    // public function main()
+    // {
+    //     $a = 0; $b = 1;
+    //     $c = 1;
+    //     while ($c < $n){
+    //         $a, b = b, a + b;
+    //         if $a % 2 === 0{   $c += 1}
+
+    //     }
+
+
+    //     return $a;
+    // }
+    // public function main(int $n): float
+    // {
+    //     $root_5 = sqrt(5);
+
+    //     $phi = (1 + $root_5) / 2;
+
+    //     $a = (($phi ** $n) - ((-$phi) ** -$n)) / $root_5;
+
+
+    //     return round($a, 2);
     // }
     // public function main(int $n): int
     // {
@@ -50,51 +111,50 @@ class Task5
 
     //     return $num_2;
     // }
-    // public function main(int $n): int
+    // public function main(int $n): float
     // {
     //     $num_1 = 0;
     //     $num_2 = 1;
-    //     $result = 0;
-    //     while (strlen((string)$num_2) < $n) {
+    //     $index = 2;
+    //     while ($index !== $n) {
     //         $temp = $num_2;
-    //         for ($i = 0;$i < strlen((string)$num_2);$i++) {
-    //         }
     //         $num_2 = $num_1 + $num_2;
     //         $num_1 = $temp;
+    //         $index++;
     //     };
 
     //     return $num_2;
     // }
 
-    public function main(int $n): float
-    {
-        $a = 1;
-        $ta = 0;
-        $b = 1;
-        $tb = 0;
-        $c = 1;
-        $rc = 0;
-        $tc = 0;
-        $d = 0;
-        $rd = 1;
+    // public function main(int $n): float
+    // {
+    //     $a = 1;
+    //     $ta = 0;
+    //     $b = 1;
+    //     $tb = 0;
+    //     $c = 1;
+    //     $rc = 0;
+    //     $tc = 0;
+    //     $d = 0;
+    //     $rd = 1;
 
-        while ($n) {
-            if ($n & 1) {
-                $tc = $rc;
-                $rc = $rc * $a + $rd * $c;
-                $rd = $tc * $b + $rd * $d;
-            }
-            $ta = $a;
-            $tb = $b;
-            $tc = $c;
-            $a = $a * $a + $b * $c;
-            $b = $ta * $b + $b * $d;
-            $c = $c * $ta + $d * $c;
-            $d = $tc * $tb + $d * $d;
+    //     while ($n) {
+    //         if ($n & 1) {
+    //             $tc = $rc;
+    //             $rc = $rc * $a + $rd * $c;
+    //             $rd = $tc * $b + $rd * $d;
+    //         }
+    //         $ta = $a;
+    //         $tb = $b;
+    //         $tc = $c;
+    //         $a = $a * $a + $b * $c;
+    //         $b = $ta * $b + $b * $d;
+    //         $c = $c * $ta + $d * $c;
+    //         $d = $tc * $tb + $d * $d;
 
-            $n >>= 1;
-        }
+    //         $n >>= 1;
+    //     }
 
-        return $rc;
-    }
+    //     return $rc;
+    // }
 }
