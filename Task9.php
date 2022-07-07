@@ -8,7 +8,7 @@ class Task9
 {
     public function main(array $arr, int $number): array
     {
-        $this->check($arr);
+        $this->check($arr, $number);
         $result = [];
         for ($i = 0;$i < count($arr) - 2;$i++) {
             $temp = [];
@@ -18,10 +18,15 @@ class Task9
 
         return $result;
     }
-    private function check(array $arr)
+    private function check(array $arr, int $number)
     {
-        if (empty($arr)) {
-            throw new InvalidArgumentException('The sum of three consecutive numbers do NOT equal to a given number. Array is empty');
+        if (empty($arr) || count($arr) !== 3 || $number < 1) {
+            throw new InvalidArgumentException('Incorrect');
+        }
+        foreach ($arr as $item) {
+            if ($item < 0) {
+                throw new InvalidArgumentException('Incorrect');
+            }
         }
     }
 }
