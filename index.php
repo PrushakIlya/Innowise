@@ -2,7 +2,7 @@
 
 include_once 'Task3.php';
 $task_3 = new ('src\Task3');
-$input = 5689;
+$input = 56891;
 if (!is_int($input)) {
     throw new InvalidArgumentException('main function only accepts integers. Input was: '.$input);
 }
