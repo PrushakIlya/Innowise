@@ -10,9 +10,9 @@ class Task2
     public function main(string $date): string
     {
         $this->check($date);
-        $date = explode('-', $date);
-        $time = date('d-m-y');
-        $time = explode('-', $time);
+        $date = explode('.', $date);
+        $time = date('d.m.y');
+        $time = explode('.', $time);
         $year = 2022;
         $date[0] < $time[0] && $date[1] === $time[1] && $year = 2023;
 
