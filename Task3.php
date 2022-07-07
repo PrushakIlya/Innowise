@@ -19,7 +19,7 @@ class Task3
     private function check(int $input)
     {
         if ($input < 10) {
-            throw new InvalidArgumentException('main function only accepts positive number. Input was: '.$input);
+            throw new InvalidArgumentException('main function only accepts positive number and > 9. Input was: '.$input);
         }
     }
 }
