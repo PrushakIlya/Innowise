@@ -20,6 +20,6 @@ class Task8
             }
         }
 
-        return $result;
+        return rtrim($result, "\n");
     }
 }
