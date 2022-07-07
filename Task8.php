@@ -15,11 +15,10 @@ class Task8
             if (str_contains($matches[0][$i], '{')) {
                 $i++;
             } else {
-                $result .= trim($matches[0][$i], '"').': '.trim($matches[0][$i + 1], '"').'<br>';
+                $result .= trim($matches[0][$i], '"').': '.trim($matches[0][$i + 1], '"')."\n";
                 $i += 2;
             }
         }
-
 
         return $result;
     }
