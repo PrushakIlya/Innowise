@@ -72,51 +72,52 @@ class Task5
 
     //     return round($a, 2);
     // }
-    // public function main(int $n): int
-    // {
-    //     $num_1 = 0;
-    //     $left = 0;
-    //     $str = '';
-    //     $num_2 = 1;
-    //     while (strlen((string)$num_2) < $n) {
-    //         $a = 0;
-    //         $result = [];
-    //         $two = $num_2;
-    //         $str_2 = str_split($num_2);
-    //         $str_1 = str_split($num_1);
-    //         $temp = str_split($num_2);
-    //         for ($i = 0;$i < count($temp);$i++) {
-    //             $temp_2 = array_pop($str_2);
-    //             if ($left === 1) {
-    //                 (int)$temp_2 += $left;
-    //                 $left = 0;
-    //             }
-    //             if (empty($str_1)) {
-    //                 $temp_1 = 0;
-    //             } else {
-    //                 (int)$temp_1 = array_pop($str_1);
-    //             }
-    //             $a = (int)$temp_1 + (int)$temp_2;
+    public function main(int $n): int
+    {
+        $test_1 = 1;
+        var_dump($test_1);
+        $num_1 = 3;
+        $left = 0;
+        $str = '';
+        $num_2 = 1;
+        // while (strlen((string)$num_2) < $n) {
+        $a = 0;
+        $two = $num_2;
+        $str_2 = str_split($num_2);
+        $str_1 = str_split($num_1);
+        $temp = str_split($num_2);
+        for ($i = 0;$i < count($temp);$i++) {
+            $temp_2 = array_pop($str_2);
+            if ($left === 1) {
+                (int)$temp_2 += $left;
+                $left = 0;
+            }
+            if (empty($str_1)) {
+                $temp_1 = 0;
+            } else {
+                (int)$temp_1 = array_pop($str_1);
+            }
+            $a = (int)$temp_1 + (int)$temp_2;
 
-    //             if ($a > 9) {
-    //                 $left = 1;
-    //                 $a = str_split($a);
-    //                 $a = array_pop($a);
-    //             };
-    //             $str .= $a;
-    //         }
-    //         $num_2 = (int)strrev($str);
-    //         $num_1 = $two;
-    //     };
+            if ($a > 9) {
+                $left = 1;
+                $a = str_split($a);
+                $a = array_pop($a);
+            };
+            $str .= $a;
+        }
+        $num_2 = (int)strrev($str);
+        $num_1 = $two;
+        // };
 
-    //     return $num_2;
-    // }
+        return $num_2;
+    }
     // public function main(int $n): float
     // {
     //     $num_1 = 0;
     //     $num_2 = 1;
-    //     $index = 2;
-    //     while ($index !== $n) {
+    //     $index = 3;
+    //     while (strlen((string)$num_2) < $n) {
     //         $temp = $num_2;
     //         $num_2 = $num_1 + $num_2;
     //         $num_1 = $temp;
