@@ -35,7 +35,7 @@ class Task12
     {
         return $this->operator($this->input_1, $this->input_2, '*');
     }
-    public function divideBy(int $divider = 1): object
+    public function divide(int $divider = 1): object
     {
         $this->check($divider);
         $this->result = $this->result / $divider;
