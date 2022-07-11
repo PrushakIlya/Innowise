@@ -14,9 +14,8 @@ class Task2
         $time = date('d.m.y');
         $time = explode('.', $time);
         $year = 2022;
-        $date[0] < $time[0] && $date[1] === $time[1] && $year = 2023;
-
-        return date_diff(new DateTime(), new DateTime($year.'-'.$date[1].'-'.($date[0] + 1)))->days;
+        (int)$date[0] < (int)$time[0] && (int)$date[1] === (int)$time[1] && $year = 2023;
+        return date_diff(new DateTime(), new DateTime($year.'-'.$date[1].'-'.((int)$date[0] + 1)))->days;
     }
     private function check(string $date)
     {
